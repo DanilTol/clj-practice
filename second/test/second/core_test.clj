@@ -27,3 +27,21 @@
     (testing "filter-10-100 function."
       (is (= test-output (app/filter-10-100 test-input))))))
     
+(deftest sqrt-sum-sq-test
+  (testing "sqrt-sum-sq function."
+    (is (= 16.881943016134134 (app/sqrt-sum-sq test-vector)))))
+
+(deftest sort-sin-test
+  (testing "sort-sin function."
+    (is (= [5 4 6 0 3 9 7 1 2 8] (app/sort-sin test-vector)))))
+
+(deftest sort-length-test
+  (let [short [1 2 3]
+        medium [2 3 4 5 6]
+        large [5 6 7 8 9 10]]
+    (testing "sort-length function."
+      (is (= (list large medium short) (app/sort-length short large medium))))))
+  
+(deftest sqrt-sum-sq-a-test
+  (testing "sqrt-sum-sq-a function."
+    (is (= 16.881943016134134 (app/sqrt-sum-sq-a test-vector)))))

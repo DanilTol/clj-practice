@@ -15,3 +15,15 @@
 
 (defn filter-10-100 [list]
   (filter (fn [x] (<= 10 x 100)) list))
+
+(defn sqrt-sum-sq [list]
+  (Math/sqrt (reduce + 0 (map (fn [x] (* x x)) list))))
+  
+(defn sort-sin [list]
+  (sort (fn [x y] (< (Math/sin x) (Math/sin y))) list))
+
+(defn sort-length [& lists]
+  (sort (fn [x y] (> (count x) (count y))) lists))
+
+(defn sqrt-sum-sq-a [list]
+  (Math/sqrt (apply + (map (fn [x] (* x x)) list))))
